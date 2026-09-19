@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Industrial Cybersecurity Platform</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Segoe UI,Arial,sans-serif;background:#0f1115;color:#fff}
+.sidebar{position:fixed;left:0;top:0;width:250px;height:100vh;background:#171b22;padding:20px;border-right:1px solid #2b313c}
+.logo{font-size:24px;font-weight:700;color:#ff6b00;margin-bottom:30px}
+.nav div{padding:12px;border-radius:8px;margin:8px 0;background:#1f242d}
+.main{margin-left:250px;padding:20px}
+.header{display:flex;justify-content:space-between;align-items:center;background:#171b22;padding:15px 20px;border-radius:12px}
+.search{background:#1f242d;border:none;padding:10px 14px;border-radius:8px;color:white;width:300px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:20px}
+.card{background:#171b22;border-radius:12px;padding:18px;border-left:4px solid #ff6b00}
+.card h4{margin:0;color:#aaa}
+.card h2{margin:10px 0 0}
+.section{background:#171b22;border-radius:12px;padding:20px;margin-top:20px}
+.row{display:grid;grid-template-columns:2fr 1fr;gap:20px}
+.table{width:100%;border-collapse:collapse}
+.table td,.table th{padding:10px;border-bottom:1px solid #2b313c;text-align:left}
+.badge{padding:4px 8px;border-radius:6px;font-size:12px}
+.critical{background:#ef4444}
+.high{background:#f97316}
+.path{font-size:18px;line-height:2}
+.graph{display:flex;align-items:center;justify-content:space-between;margin-top:20px}
+.node{background:#1f242d;padding:15px;border:2px solid #ff6b00;border-radius:12px;width:140px;text-align:center}
+.arrow{font-size:28px;color:#ff6b00}
+.footer{color:#888;margin-top:20px}
+</style>
+</head>
+<body>
+<div class="sidebar">
+<div class="logo">OT Secure</div>
+<div class="nav">
+<div>📊 Dashboard</div>
+<div>🛡 Attack Paths</div>
+<div>🖥 Assets</div>
+<div>🌐 Network</div>
+<div>📑 Reports</div>
+<div>⚙ Settings</div>
+</div>
+</div>
+
+<div class="main">
+<div class="header">
+<div>
+<h2 style="margin:0">Industrial Cybersecurity Platform</h2>
+<small>Operational Technology Security Dashboard</small>
+</div>
+<input class="search" placeholder="Search assets, risks, paths...">
+</div>
+
+<div class="grid">
+<div class="card"><h4>Total Assets</h4><h2>4218</h2></div>
+<div class="card"><h4>Critical Assets</h4><h2>162</h2></div>
+<div class="card"><h4>Open Risks</h4><h2>74</h2></div>
+<div class="card"><h4>Attack Paths</h4><h2>13</h2></div>
+<div class="card"><h4>Critical Findings</h4><h2>15</h2></div>
+<div class="card"><h4>Exposed Assets</h4><h2>7</h2></div>
+<div class="card"><h4>Sensor Health</h4><h2>98%</h2></div>
+<div class="card"><h4>Coverage</h4><h2>96%</h2></div>
+</div>
+
+<div class="row">
+<div class="section">
+<h3>Risk & Findings</h3>
+<table class="table">
+<tr><th>Title</th><th>Severity</th><th>Asset</th><th>Status</th></tr>
+<tr><td>PLC Exposure</td><td><span class="badge critical">Critical</span></td><td>PLC-01</td><td>Open</td></tr>
+<tr><td>Historian Vulnerability</td><td><span class="badge high">High</span></td><td>Historian-02</td><td>Investigating</td></tr>
+</table>
+</div>
+
+<div class="section">
+<h3>Platform Health</h3>
+<p>Sensor Health: 98%</p>
+<p>Visibility Coverage: 96%</p>
+<p>Collection Status: Active</p>
+<p>Data Recency: 2 min</p>
+</div>
+</div>
+
+<div class="section">
+<h3>Highest Risk Attack Path</h3>
+<div class="path">
+Internet Gateway → VPN Gateway → Historian Server → Engineering Workstation → PLC Controller
+</div>
+<p><b>Risk Score:</b> 9.8 | <b>Confidence:</b> 92%</p>
+</div>
+
+<div class="section">
+<h3>Attack Path Investigation Workspace</h3>
+<div class="graph">
+<div class="node">Internet<br>Source</div>
+<div class="arrow">➜</div>
+<div class="node">VPN Gateway<br>Pivot</div>
+<div class="arrow">➜</div>
+<div class="node">Windows Server<br>Pivot</div>
+<div class="arrow">➜</div>
+<div class="node">Historian<br>Pivot</div>
+<div class="arrow">➜</div>
+<div class="node">PLC Controller<br>Target</div>
+</div>
+
+<h4>Investigation Details</h4>
+<p><b>Why It Matters:</b> Controls production line operations.</p>
+<p><b>Evidence:</b> Open Modbus service and trusted communication path.</p>
+<p><b>Mitigation:</b> Restrict access, segment network, patch firmware.</p>
+</div>
+
+<div class="footer">
+Professional Cybersecurity Dashboard Prototype
+</div>
+</div>
+</body>
+</html>
